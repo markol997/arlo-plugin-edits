@@ -7,6 +7,7 @@ use Arlo\Entities\Categories as CategoriesEntity;
 class Utilities {
 
 	public static function array_ikey_exists($key,$arr) { 
+		
 		if(preg_match("/".$key."/i", join(",", array_keys($arr))))                
 			return true; 
 		else 
@@ -188,7 +189,6 @@ class Utilities {
         if (parse_url($rel, PHP_URL_SCHEME) != '' || empty($rel)) {
             return ($rel);
         }
-
         return (get_home_url() . $rel);
     }
 
